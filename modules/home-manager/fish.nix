@@ -30,8 +30,8 @@
       };
       gca = "git commit --amend --no-edit";
 
-			tc = "rm -rvf /home/droid/temp; mkdir -vp /home/droid/temp";
-			td = "cd /home/droid/temp";
+			tc = "rm -rvf /home/nick/temp; mkdir -vp /home/nick/temp";
+			td = "cd /home/nick/temp";
     };
     functions = {
       d = # fish
