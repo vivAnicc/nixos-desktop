@@ -1,10 +1,12 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   home.sessionVariables.TERMINAL = "ghostty";
 
   programs.ghostty = {
     enable = true;
+    package = inputs.ghostty.packages.x86_64-linux.default;
+
     enableFishIntegration = true;
     settings = {
       cursor-style = "block";

@@ -36,7 +36,6 @@
 			url = "github:zigtools/zls";
 			inputs = {
 				nixpkgs.follows = "nixpkgs";
-				zig-overlay.follows = "zig";
 			};
 		};
 
@@ -44,6 +43,11 @@
 			url = "github:mitchellh/zig-overlay";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
 		# This can be added again once I add x86_64 to the flake
     # ccalc = {

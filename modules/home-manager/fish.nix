@@ -47,16 +47,16 @@
       term = # fish
       ''
         if count $argv > 0
-            ${pkgs.ghostty}/bin/ghostty -e fish -c "$argv"
+            ghostty -e fish -c "$argv"
         else
-            ${pkgs.ghostty}/bin/ghostty -e fish
+            ghostty -e fish
         end
       '';
 
       y = # fish
       ''
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        ${pkgs.yazi}/bin/yazi $argv --cwd-file="$tmp"
+        yazi $argv --cwd-file="$tmp"
         if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
           cd -- "$cwd"
         end
@@ -66,7 +66,7 @@
       explorer = # fish
       ''
         set tmp (mktemp -t "yazi-cdw.XXXXXX")
-        ${pkgs.yazi}/bin/yazi $argv --cwd-file="$tmp"
+        yazi $argv --cwd-file="$tmp"
         if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]
             rm -f -- "$tmp"
             cd -- $cwd
