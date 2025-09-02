@@ -26,7 +26,7 @@
 
     packages = [
       pkgs.file
-
+      pkgs.tree
       # inputs.ccalc.packages.x86_64-linux.default
     ];
   };
