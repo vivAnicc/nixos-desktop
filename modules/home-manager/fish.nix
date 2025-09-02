@@ -47,9 +47,9 @@
       term = # fish
       ''
         if count $argv > 0
-            ghostty -e fish -c "$argv"
+            $TERMINAL -e fish -c "$argv"
         else
-            ghostty -e fish
+            $TERMINAL -e fish
         end
       '';
 
