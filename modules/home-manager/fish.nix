@@ -46,7 +46,7 @@
 
       term = # fish
       ''
-        if count $argv > 0
+        if test (count $argv) -gt 0
             $TERMINAL -e fish -c "$argv"
         else
             $TERMINAL -e fish
