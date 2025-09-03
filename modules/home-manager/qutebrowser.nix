@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, config, ... }:
 
 {
   programs.qutebrowser = {
@@ -7,6 +7,8 @@
     keyBindings.normal = {
       "<Ctrl+Shift+Tab>" = "tab-prev";
       "<Ctrl+Tab>" = "tab-next";
+      "<Ctrl+e>" = "edit-text";
+      "<Alt+e>" = "edit.url";
     };
 
     settings = {
@@ -29,8 +31,8 @@
           whitelist = null;
         };
       };
-      editor.command = [ "hx" "'{file}'" ];
-      input.insert_mode.auto_load = true;
+      editor.command = [ "${pkgs.fish}/bin/fish" "-c" "term nvim '{file}'" ];
+      input.insert_mode.auto_load = false;
       scrolling.smooth = true;
       tabs.last_close = "close";
       tabs.position = "top";
