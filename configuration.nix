@@ -32,6 +32,9 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
     nvidiaPersistenced = true;
   };
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = 1;
+  };
 
   environment.systemPackages = [
     pkgs.egl-wayland
