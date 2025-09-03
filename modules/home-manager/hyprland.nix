@@ -272,7 +272,7 @@
         "SUPER, w, exec, $terminal"
         "SUPER, e, exec, $fileManager"
         "SUPER, b, exec, $browser"
-        "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen-browser"
+        "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen"
         "SUPER, Space, exec, $menu"
         "SUPER, o, exec, ${pkgs.wofi}/bin/wofi -n --show run"
 
