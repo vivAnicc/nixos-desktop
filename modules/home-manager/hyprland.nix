@@ -163,7 +163,7 @@
         touchpad.natural_scroll = false;
       };
 
-      gestures.workspace_swipe = false;
+      # gestures.workspace_swipe = false;
 
       device = {
         name = "epic-mouse-v1";
