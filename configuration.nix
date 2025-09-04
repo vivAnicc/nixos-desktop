@@ -109,4 +109,6 @@
   #   channel = "https://nixos.org/channels/nixos-unstable";
   #   dates = "daily";
   # };
+
+  services.desktopManager.plasma6.enable = true;
 }
