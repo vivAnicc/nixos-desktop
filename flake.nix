@@ -12,6 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland = {
+      url = "github:hyprwm/hyprland";
+    };
+
     # nur = {
     #   url = "github:nix-community/NUR";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -34,9 +38,9 @@
 
 		zls = {
 			url = "github:zigtools/zls";
-			inputs = {
-				nixpkgs.follows = "nixpkgs";
-			};
+			# inputs = {
+			# 	nixpkgs.follows = "nixpkgs";
+			# };
 		};
 
 		zig = {
@@ -46,7 +50,7 @@
 
     ghostty = {
       url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
 		# This can be added again once I add x86_64 to the flake

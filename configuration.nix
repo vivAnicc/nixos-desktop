@@ -2,11 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, unfree-pkgs, pkgs, inputs, lib, ... }:
+{ config, unfree-pkgs, pkgs, inputs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    modules/nixos/cachix.nix
 
     inputs.home-manager.nixosModules.home-manager
     modules/nixos/ssh.nix
@@ -102,7 +103,11 @@
   #   "/run/media/root/boot".device = "/dev/nvme0n1p1";
   # };
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.x86_64-linux.hyprland;
+    portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
+  };
 
   # system.autoUpgrade = {
   #   enable = true;
