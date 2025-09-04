@@ -37,7 +37,7 @@
     };
 
 		zls = {
-			url = "github:zigtools/zls";
+			url = "github:zigtools/zls/38b0e83ff81785bc01d85a2f0734e4b53556bdfc";
 			# inputs = {
 			# 	nixpkgs.follows = "nixpkgs";
 			# };
