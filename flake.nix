@@ -14,6 +14,7 @@
 
     hyprland = {
       url = "github:hyprwm/hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # nur = {
@@ -50,7 +51,7 @@
 
     ghostty = {
       url = "github:ghostty-org/ghostty";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
 		# This can be added again once I add x86_64 to the flake
