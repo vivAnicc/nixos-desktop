@@ -32,21 +32,21 @@
     ];
   };
 
-  # gtk = {
-  #   theme = {
-  #     package = pkgs.gnome-themes-extra;
-  #     name = "Adwaita";
-  #   };
-  #   cursorTheme.name = "Adwaita";
-  #   iconTheme.name = "Adwaita";
-  #   enable = true;
-  # };
-  # home.pointerCursor = {
-  #   gtk.enable = true;
-  #   name = "Adwaita";
-  #   package = pkgs.gnome-themes-extra;
-  # };
-  # home.file."${config.home.homeDirectory}/.gtkrc-2.0".force = lib.mkForce true;
+  gtk = {
+    theme = {
+      package = pkgs.gnome-themes-extra;
+      name = "Adwaita";
+    };
+    cursorTheme.name = "Adwaita";
+    iconTheme.name = "Adwaita";
+    enable = true;
+  };
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Adwaita";
+    package = pkgs.gnome-themes-extra;
+  };
+  home.file."${config.home.homeDirectory}/.gtkrc-2.0".force = lib.mkForce true;
 
   programs.home-manager.enable = true;
 }

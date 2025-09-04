@@ -109,9 +109,4 @@
   #   channel = "https://nixos.org/channels/nixos-unstable";
   #   dates = "daily";
   # };
-
-  services.xserver.desktopManager.gnome.enable = true;
-  # services.gnome.gcr-ssh-agent.enable = false;
-  services.xserver.displayManager.gdm.enable = false;
-  programs.ssh.startAgent = lib.mkForce false;
 }
