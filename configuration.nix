@@ -84,7 +84,7 @@
 
   fonts.packages = [ pkgs.nerd-fonts.adwaita-mono ];
 
-  console.keyMap = "it2";
+  console.keyMap = "it";
 
   services.printing.enable = true;
 
