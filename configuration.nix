@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, unfree-pkgs, pkgs, inputs, ... }:
+{ config, unfree-pkgs, pkgs, inputs, lib, ... }:
 
 {
   imports = [
@@ -110,5 +110,8 @@
   #   dates = "daily";
   # };
 
-  services.desktopManager.plasma6.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  # services.gnome.gcr-ssh-agent.enable = false;
+  services.xserver.displayManager.gdm.enable = false;
+  programs.ssh.startAgent = lib.mkForce false;
 }
