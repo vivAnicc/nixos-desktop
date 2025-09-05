@@ -47,9 +47,9 @@
       term = # fish
       ''
         if test (count $argv) -gt 0
-            $TERMINAL -e fish -c "$argv"
+            $TERMINAL -e fish -c "cd $HOME; $argv"
         else
-            $TERMINAL -e fish
+            $TERMINAL -e fish -C "cd $HOME"
         end
       '';
 
