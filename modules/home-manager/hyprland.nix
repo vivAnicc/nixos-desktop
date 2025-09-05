@@ -8,6 +8,12 @@
     pkgs.hyprshot
     pkgs.hyprlock
 
+    pkgs.qt5.qtwayland
+    pkgs.qt6.qtwayland
+    pkgs.libsForQt5.qt5ct
+    pkgs.qt6ct
+    pkgs.wl-clipboard
+
     inputs.zen-browser.packages."${pkgs.system}".default
   ];
 
@@ -29,7 +35,21 @@
     package = null;
     portalPackage = null;
 
+    xwayland.enable = true;
+
     settings = {
+      env = [
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "__GL_GSYNC_ALLOWED,0"
+        "__GL_VRR_ALLOWED,0"
+        "QT_QPA_PLATFORM,wayland"
+        "XCURSOR_SIZE,24"
+        "NIXOS_OZONE_WL,1"
+        "WLR_NO_HARDWARE_CURSORS,1"
+      ];
 
       monitor = ",preferred,auto,auto";
 
@@ -38,9 +58,10 @@
       "$browser" = "${pkgs.qutebrowser}/bin/qutebrowser";
       "$menu" = "${pkgs.wofi}/bin/wofi -n --show drun";
 
-      # cursor = {
-      #   inactive_timeout = 20;
-      # };
+      cursor = {
+        inactive_timeout = 10;
+        no_hardware_cursors = true;
+      };
 
       exec-once = [
         "${pkgs.waybar}/bin/waybar"

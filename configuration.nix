@@ -8,6 +8,8 @@
   imports = [
     ./hardware-configuration.nix
     modules/nixos/cachix.nix
+    modules/nixos/themes.nix
+    modules/nixos/nvidia.nix
 
     inputs.home-manager.nixosModules.home-manager
     modules/nixos/ssh.nix
@@ -28,18 +30,18 @@
     configurationLimit = 20;
   };
 
-  hardware.nvidia.powerManagement.enable = true;
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
-    nvidiaPersistenced = true;
-  };
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = 1;
-  };
+  # hardware.nvidia.powerManagement.enable = true;
+  # hardware.nvidia = {
+  #   package = config.boot.kernelPackages.nvidiaPackages.beta;
+  #   nvidiaPersistenced = true;
+  # };
+  # environment.sessionVariables = {
+  #   WLR_NO_HARDWARE_CURSORS = 1;
+  # };
 
   environment.systemPackages = [
     pkgs.egl-wayland
-    pkgs.nvidia-vaapi-driver
+    # pkgs.nvidia-vaapi-driver
     pkgs.wl-clipboard
     pkgs.wget
   ];
