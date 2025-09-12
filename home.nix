@@ -19,8 +19,6 @@
     # ./modules/home-manager/bitwarden.nix
   ];
 
-  # nixpkgs.config.allowUnfree = true;
-
   home = {
     username = "nick";
     homeDirectory = "/home/nick";
@@ -33,22 +31,6 @@
       # inputs.ccalc.packages.x86_64-linux.default
     ];
   };
-
-  # gtk = {
-  #   theme = {
-  #     package = pkgs.gnome-themes-extra;
-  #     name = "Adwaita";
-  #   };
-  #   cursorTheme.name = "Adwaita";
-  #   iconTheme.name = "Adwaita";
-  #   enable = true;
-  # };
-  # home.pointerCursor = {
-  #   gtk.enable = true;
-  #   name = "Adwaita";
-  #   package = pkgs.gnome-themes-extra;
-  # };
-  # home.file."${config.home.homeDirectory}/.gtkrc-2.0".force = lib.mkForce true;
 
   programs.home-manager.enable = true;
 }
