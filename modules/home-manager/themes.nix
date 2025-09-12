@@ -16,7 +16,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita";
+      name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
     };
     cursorTheme = {
