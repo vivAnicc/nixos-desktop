@@ -28,6 +28,7 @@
       pkgs.file
       pkgs.tree
       pkgs.gnome-themes-extra
+      pkgs.bitwarden
       # inputs.ccalc.packages.x86_64-linux.default
     ];
   };
