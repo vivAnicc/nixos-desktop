@@ -12,7 +12,7 @@
       cursor-style = "block";
       shell-integration = "fish";
 
-      theme = "catppuccin-mocha";
+      theme = "Catppuccin Mocha";
 
       focus-follows-mouse = true;
 
