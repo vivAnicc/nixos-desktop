@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -29,6 +29,7 @@
       pkgs.tree
       pkgs.gnome-themes-extra
       pkgs.bitwarden
+      pkgs.thunderbird
       # inputs.ccalc.packages.x86_64-linux.default
     ];
   };
