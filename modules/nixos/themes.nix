@@ -14,7 +14,7 @@
   programs.dconf.enable = true;
 
   environment = {
-    variables.GTK_THEME = "Adwaita-dark";
+    variables.GTK_THEME = "Adwaita";
     systemPackages = [ pkgs.gnome-themes-extra ];
   };
 }

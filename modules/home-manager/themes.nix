@@ -1,9 +1,20 @@
 { pkgs, ... }:
 
 {
+  home.packages = [
+    # pkgs.dconf
+  ];
+
+  # dconf = {
+  #   enable = true;
+  #   settings = {
+  #     "org/
+  #   };
+  # };
+
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "adwaita";
   };
 
   home.pointerCursor = {
@@ -15,8 +26,9 @@
 
   gtk = {
     enable = true;
+    colorScheme = "dark";
     theme = {
-      name = "Adwaita-dark";
+      name = "Adwaita";
       package = pkgs.gnome-themes-extra;
     };
     cursorTheme = {
