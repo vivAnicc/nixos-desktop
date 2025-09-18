@@ -24,7 +24,6 @@
     NIXOS_OZONE_WL = "1";
     NVD_BACKEND = "direct";
 
-    DCONF_PROFILE = "hyprland";
     XCURSOR_SIZE = 24;
     HYPRCURSOR_SIZE = 24;
   };
