@@ -7,6 +7,12 @@
     pkgs.bitwarden-cli
     pkgs.jp
     inputs.nix-your-shell.packages."${pkgs.system}".nix-your-shell
+    (
+     pkgs.writeShellScriptBin "lights-off" #bash
+     ''
+      systemctl hibernate
+     ''
+    )
   ];
 
   programs.fish = {
@@ -76,18 +82,6 @@
         end
       '';
 
-      lights = # fish
-      ''
-        if test "$argv[1]" = on
-            hyprctl dispatch dpms on
-        else if test "$argv[1]" = off
-            hyprctl dispatch dpms off
-        else
-            echo "Usage: lights on|off"
-            exit 1
-        end
-      '';
-      
       fish_greeting = "";
       fish_command_not_found = "";
 
