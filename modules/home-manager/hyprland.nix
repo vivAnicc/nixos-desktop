@@ -65,6 +65,7 @@
       exec-once = [
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.swaynotificationcenter}/bin/swaync"
+        "${pkgs.keyutils}/bin/keyctl link @u @s"
         # "${pkgs.nordvpn}/bin/nordvpn connect italy"
       ];
 

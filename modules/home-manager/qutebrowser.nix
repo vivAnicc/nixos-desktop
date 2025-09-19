@@ -1,8 +1,25 @@
-{ pkgs, config, ... }:
+{ pkgs, unfree-pkgs, ... }:
 
 {
-  programs.qutebrowser = {
+  home.packages = [
+    pkgs.keyutils
+  ];
+
+  programs.rofi = {
     enable = true;
+    theme = "Arc-Dark";
+  };
+
+  programs.qutebrowser = let
+    qutebrowser = unfree-pkgs.qutebrowser.override {
+      enableWideVine = true;
+    };
+    # // {
+    #   buildInputs = unfree-pkgs.qutebrowser.buildInputs ++ [ pkgs.keyutils ];
+    # };
+  in {
+    enable = true;
+    package = qutebrowser;
 
     keyBindings.normal = {
       "<Ctrl+Shift+Tab>" = "tab-prev";
