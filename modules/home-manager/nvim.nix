@@ -178,6 +178,11 @@ in {
 		keymaps = [
 			{
 				mode = "n";
+				key = ":";
+				action = "q:i";
+			}
+      {
+				mode = "n";
 				key = "<leader>e";
 				action = "<cmd>Oil<CR>";
 			}
