@@ -16,6 +16,7 @@
     modules/home-manager/hypridle.nix
     modules/home-manager/zellij.nix
     modules/home-manager/ghostty.nix
+    modules/home-manager/ludusavi.nix
     # ./modules/home-manager/bitwarden.nix
   ];
 
