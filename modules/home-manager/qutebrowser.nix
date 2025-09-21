@@ -26,6 +26,7 @@
       "<Ctrl+Tab>" = "tab-next";
       "<Ctrl+e>" = "edit-text";
       "<Alt+e>" = "edit.url";
+      "cc" = "spawn --userscript qute-bitwarden";
     };
 
     settings = {
