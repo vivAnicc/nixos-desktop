@@ -50,10 +50,11 @@ in {
 
 			fzf-lua = {
 				enable = true;
-        package = pkgs.vimPlugins.fzf-lua.overrideAttrs (old: {
-          dontCheck = true;
-          doCheck = false;
-        });
+        package = pkgs.vimPlugins.fzf-lua;
+        #   .overrideAttrs (old: {
+        #   dontCheck = true;
+        #   doCheck = false;
+        # });
         # lazyLoad.settings.cmd = "FzfLua";
 				profile = "default";
 				settings.files = {
@@ -169,6 +170,8 @@ in {
 			winborder = "rounded";
 
 			scrolloff = 5;
+
+      timeout = false;
 		};
 
 		globals = {
