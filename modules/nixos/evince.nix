@@ -1,5 +1,5 @@
 { ... }:
 
 {
-  programs.evince.enabla = true;
+  programs.evince.enable = true;
 }

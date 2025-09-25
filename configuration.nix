@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, unfree-pkgs, pkgs, inputs, ... }:
+{ unfree-pkgs, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -18,6 +18,7 @@
     modules/nixos/ydotool.nix
     modules/nixos/steam.nix
     modules/nixos/git.nix
+    modules/nixos/evince.nix
   ];
 
   system.stateVersion = "25.05";
