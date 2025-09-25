@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  programs.evince.enabla = true;
+}
