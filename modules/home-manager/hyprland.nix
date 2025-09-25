@@ -218,6 +218,8 @@
       ];
 
       bind = [
+        "SUPER, Return, exec, ${pkgs.ydotool}/bin/ydotool key 125:0 && sleep 0.1 && ${pkgs.ydotool}/bin/ydotool click C0"
+
         "SUPER, m, movetoworkspacesilent, special"
         "SUPER, s, togglespecialworkspace"
 
