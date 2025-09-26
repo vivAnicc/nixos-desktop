@@ -150,7 +150,6 @@ in {
 			ignorecase = true;
 			smartcase = true;
 			incsearch = true;
-			# hlsearch = false;
 
 			inccommand = "split";
 
@@ -172,6 +171,8 @@ in {
 			scrolloff = 5;
 
       timeout = false;
+
+      cmdwinheight = 1;
 		};
 
 		globals = {
