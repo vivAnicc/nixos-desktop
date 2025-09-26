@@ -231,10 +231,12 @@
 
         "SUPER, f11, fullscreen"
 
-        "SUPER, c, exec, ${pkgs.fish}/bin/fish -c 'term bwup'"
-        "SUPER, u, exec, ${pkgs.fish}/bin/fish -c 'term bwu'"
-        "SUPER, p, exec, ${pkgs.fish}/bin/fish -c 'term bwp'"
-        "SUPER, a, exec, ${pkgs.fish}/bin/fish -c 'term bwa'"
+        # "SUPER, c, exec, ${pkgs.fish}/bin/fish -c 'term bwup'"
+        # "SUPER, u, exec, ${pkgs.fish}/bin/fish -c 'term bwu'"
+        # "SUPER, p, exec, ${pkgs.fish}/bin/fish -c 'term bwp'"
+        # "SUPER, a, exec, ${pkgs.fish}/bin/fish -c 'term bwa'"
+
+        "SUPER, c, exec, ${pkgs.rofi}/bin/rofi -show run"
 
         "SUPER, Backspace, exec, ${pkgs.hyprlock}/bin/hyprlock"
 
