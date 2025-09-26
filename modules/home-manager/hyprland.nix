@@ -89,7 +89,7 @@
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 2;
         # rounding_power = 2
 
         # Change transparency of focused and unfocused windows
