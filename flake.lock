@@ -701,6 +701,27 @@
         "type": "github"
       }
     },
+    "needlelight": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1759002525,
+        "narHash": "sha256-1n6RIa7rOdVA1p40XFOsRcaNFqRIKBFptH/SDxpr7ng=",
+        "owner": "vivAnicc",
+        "repo": "needlelight-flake",
+        "rev": "92a09c7419b1fafcc33a2e543da71b6822fd3703",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivAnicc",
+        "repo": "needlelight-flake",
+        "type": "github"
+      }
+    },
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
@@ -868,6 +889,7 @@
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",
+        "needlelight": "needlelight",
         "nix-your-shell": "nix-your-shell",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
@@ -999,6 +1021,27 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "utils": {
+      "inputs": {
+        "nixpkgs": [
+          "needlelight",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758190880,
+        "narHash": "sha256-Hj9M8IiiZT9YmOuQdkWQdYPLDE5qkUabGz+gZP628S8=",
+        "owner": "vivAnicc",
+        "repo": "nix-utils",
+        "rev": "1f59cfa39cc03376df145538a5cf9eb9dc8e1066",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivAnicc",
+        "repo": "nix-utils",
         "type": "github"
       }
     },

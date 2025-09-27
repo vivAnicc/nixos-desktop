@@ -66,6 +66,11 @@
     };
 
     ascii-utils.url = "github:oluceps/nix-ascii2char/main";
+
+    needlelight = {
+      url = "github:vivAnicc/needlelight-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, ... }@inputs: {
