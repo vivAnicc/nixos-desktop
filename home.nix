@@ -20,6 +20,7 @@
     modules/home-manager/mpv.nix
     modules/home-manager/vesktop.nix
     modules/home-manager/xdg.nix
+    modules/home-manager/games.nix
     # ./modules/home-manager/bitwarden.nix
   ];
 
