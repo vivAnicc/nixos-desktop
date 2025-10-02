@@ -21,6 +21,8 @@
 
     shellAbbrs = {
       v = "nvim";
+      m = "${pkgs.bc}/bin/bc -q";
+
       la = "ls -A";
 			"-" = "cd -";
 
