@@ -118,7 +118,7 @@
     };
 
     shellAliases = {
-      py = "python3";
+      py = "${pkgs.python3}/bin/python3";
     };
 
     shellInit = # fish
