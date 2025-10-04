@@ -33,6 +33,8 @@
       import catppuccin
 
       catppuccin.setup(c, 'mocha', True)
+
+      config.set('colors.webpage.darkmode.enabled', False, '*.duckduckgo.com');
     '';
 
     keyBindings.normal = {
@@ -47,10 +49,9 @@
       colors.webpage = {
         darkmode = {
           algorithm = "lightness-hsl";
-          enabled = true;
+          # enabled = true;
         };
         preferred_color_scheme = "dark";
-        bg = "";
       };
       content = {
         autoplay = false;
@@ -59,7 +60,7 @@
             "https://easylist.to/easylist/easylist.txt"
             "https://easylist.to/easylist/easyprivacy.txt"
           ];
-          enabled = true;
+          # enabled = true;
           method = "both";
           whitelist = null;
         };
@@ -69,6 +70,11 @@
       scrolling.smooth = true;
       tabs.last_close = "close";
       tabs.position = "top";
+
+      url = {
+        start_pages = "about:blank";
+        default_page = "about:blank";
+      };
     };
 
     perDomainSettings = {
