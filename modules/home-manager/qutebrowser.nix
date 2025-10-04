@@ -5,6 +5,13 @@
     pkgs.keyutils
   ];
 
+  xdg.configFile."qutebrowser/catppuccin".source = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "qutebrowser";
+    rev = "715ebccaf8131eddaef3ef6960580735e4525244";
+    hash = "sha256-0QPssOh87pl55tV+6zLVtT3toUrZac+RAcEZKDcSdKE=";
+  };
+
   programs.rofi = {
     enable = true;
     theme = "Arc-Dark";
@@ -21,6 +28,13 @@
     enable = true;
     package = qutebrowser;
 
+    extraConfig = #python
+    ''
+      import catppuccin
+
+      catppuccin.setup(c, 'mocha', True)
+    '';
+
     keyBindings.normal = {
       "<Ctrl+Shift+Tab>" = "tab-prev";
       "<Ctrl+Tab>" = "tab-next";
@@ -36,6 +50,7 @@
           enabled = true;
         };
         preferred_color_scheme = "dark";
+        bg = "";
       };
       content = {
         autoplay = false;
