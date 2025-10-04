@@ -34,7 +34,8 @@
 
       catppuccin.setup(c, 'mocha', True)
 
-      config.set('colors.webpage.darkmode.enabled', False, '*.duckduckgo.com');
+      # config.set('colors.webpage.darkmode.enabled', True);
+      # config.set('colors.webpage.darkmode.enabled', False, 'about:blank');
     '';
 
     keyBindings.normal = {
@@ -48,8 +49,8 @@
     settings = {
       colors.webpage = {
         darkmode = {
-          algorithm = "lightness-hsl";
-          # enabled = true;
+          algorithm = "lightness-cielab";
+          enabled = true;
         };
         preferred_color_scheme = "dark";
       };
@@ -60,7 +61,7 @@
             "https://easylist.to/easylist/easylist.txt"
             "https://easylist.to/easylist/easyprivacy.txt"
           ];
-          # enabled = true;
+          enabled = true;
           method = "both";
           whitelist = null;
         };
@@ -68,8 +69,14 @@
       editor.command = [ "${pkgs.fish}/bin/fish" "-c" "term nvim '{file}'" ];
       input.insert_mode.auto_load = false;
       scrolling.smooth = true;
-      tabs.last_close = "close";
-      tabs.position = "top";
+
+      tabs = {
+        last_close = "close";
+        position = "top";
+        show = "switching";
+      };
+
+      statusbar.show = "in-mode";
 
       url = {
         start_pages = "about:blank";
@@ -82,6 +89,7 @@
       "github.com".content.javascript.clipboard = "access-paste";
 
       "www.youtube.com".content.notifications.enabled = false;
+      "about:blank".colors.webpage.darkmode.enabled = false;
     };
   };
 }
