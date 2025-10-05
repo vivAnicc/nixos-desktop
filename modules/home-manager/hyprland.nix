@@ -15,6 +15,9 @@
     pkgs.wl-clipboard
 
     inputs.zen-browser.packages."${pkgs.system}".default
+
+    # Fix xdg-open trying to use "x-terminal-emulator" to open terminals
+    (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
   ];
 
   home.sessionVariables = {
