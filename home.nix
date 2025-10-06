@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -37,6 +37,8 @@
       pkgs.thunderbird
       # inputs.ccalc.packages.x86_64-linux.default
     ];
+
+    file."games".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/Steam/steamapps/common";
   };
 
   programs.home-manager.enable = true;
