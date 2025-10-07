@@ -15,10 +15,10 @@ let
     printf $choosen
   '';
   package = pkgs.stdenvNoCC.mkDerivation {
-    name = "explorer";
+    name = "choose-dir";
     version = "1.0";
 
-    src = builtins.toFile "explorer.fish" script;
+    src = builtins.toFile "choose-dir.fish" script;
 
     buildInputs = [
       pkgs.fish
@@ -30,7 +30,8 @@ let
 
     installPhase = ''
       mkdir -p $out/bin
-      cp $src $out/bin/explorer
+      cp $src $out/bin/choose-dir
+      chmod a+x $out/bin/choose-dir
     '';
   };
 in {

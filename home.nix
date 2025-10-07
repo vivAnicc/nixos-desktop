@@ -21,7 +21,7 @@
     modules/home-manager/vesktop.nix
     modules/home-manager/xdg.nix
     modules/home-manager/games.nix
-    modules/home-manager/explorer.nix
+    modules/home-manager/choose-dir.nix
     # ./modules/home-manager/bitwarden.nix
   ];
 
