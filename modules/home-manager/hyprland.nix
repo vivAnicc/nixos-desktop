@@ -298,7 +298,9 @@
         "SUPER_SHIFT, d, forcekillactive"
 
         "SUPER, w, exec, $terminal"
-        "SUPER, e, exec, $fileManager"
+#TODO: move this in a script, so you can abort if you hit escape (returns empty)
+        "SUPER, e, exec, fish -c \"term explorer ~/\\\"$(choose-dir ~)\\\"\""
+        # "SUPER, e, exec, $fileManager"
         "SUPER, b, exec, $browser"
         "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen"
         "SUPER, Space, exec, $menu"
