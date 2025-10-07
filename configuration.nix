@@ -19,6 +19,7 @@
     modules/nixos/steam.nix
     modules/nixos/git.nix
     modules/nixos/evince.nix
+    modules/nixos/ly.nix
   ];
 
   system.stateVersion = "25.05";
