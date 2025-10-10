@@ -55,7 +55,7 @@
 
       monitor = ",preferred,auto,auto";
 
-      "$terminal" = "${pkgs.fish}/bin/fish -c 'term'";
+      "$terminal" = "${pkgs.ghostty}/bin/ghostty";
       "$fileManager" = "${pkgs.fish}/bin/fish -c 'term explorer'";
       "$browser" = "${pkgs.qutebrowser}/bin/qutebrowser";
       "$menu" = "${pkgs.wofi}/bin/wofi -n --show drun";
