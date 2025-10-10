@@ -20,6 +20,7 @@
     modules/nixos/git.nix
     modules/nixos/evince.nix
     modules/nixos/ly.nix
+    modules/nixos/interception-tools.nix
   ];
 
   system.stateVersion = "25.05";
