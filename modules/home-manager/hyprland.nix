@@ -18,6 +18,18 @@
 
     # Fix xdg-open trying to use "x-terminal-emulator" to open terminals
     (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
+    (pkgs.writeShellScriptBin "explore-script" ''
+     fish -c '
+     ${#fish
+      ''
+        set -l choosen (choose-dir ~)
+
+        set -l escaped (string escape "$choosen")
+
+        ghostty -e fish -C "cd ~/$escaped"
+      ''}
+      '
+    '')
   ];
 
   home.sessionVariables = {
@@ -299,7 +311,7 @@
 
         "SUPER, w, exec, $terminal"
 #TODO: move this in a script, so you can abort if you hit escape (returns empty)
-        "SUPER, e, exec, fish -c \"term explorer ~/\\\"$(choose-dir ~)\\\"\""
+        "SUPER, e, exec, explore-script"
         # "SUPER, e, exec, $fileManager"
         "SUPER, b, exec, $browser"
         "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen"
