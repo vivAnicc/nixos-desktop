@@ -90,6 +90,27 @@
         "type": "github"
       }
     },
+    "copy-paste": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1760380140,
+        "narHash": "sha256-+Bhm+PYJ51gbyi2YeF5EY8eh1AukmrN85OkQuwkphhk=",
+        "owner": "vivAnicc",
+        "repo": "copy-paste",
+        "rev": "5ae38ce09f3f393d59e3f163d9934052c7ca621d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivAnicc",
+        "repo": "copy-paste",
+        "type": "github"
+      }
+    },
     "crane": {
       "inputs": {
         "nixpkgs": [
@@ -706,7 +727,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "utils": "utils"
+        "utils": "utils_2"
       },
       "locked": {
         "lastModified": 1759002757,
@@ -886,6 +907,7 @@
       "inputs": {
         "ascii-utils": "ascii-utils",
         "chaotic": "chaotic",
+        "copy-paste": "copy-paste",
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",
@@ -1042,6 +1064,27 @@
       }
     },
     "utils": {
+      "inputs": {
+        "nixpkgs": [
+          "copy-paste",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759410884,
+        "narHash": "sha256-N7yN+P0pORbrBZg/wu6fFa/TjnQiCmK6lpP26EWtF0M=",
+        "owner": "vivAnicc",
+        "repo": "nix-utils",
+        "rev": "3449061a333aa06b2eaf74c936b99d0e563f050b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivAnicc",
+        "repo": "nix-utils",
+        "type": "github"
+      }
+    },
+    "utils_2": {
       "inputs": {
         "nixpkgs": [
           "needlelight",

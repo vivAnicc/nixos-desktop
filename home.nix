@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports = [
@@ -36,6 +36,8 @@
       pkgs.gnome-themes-extra
       pkgs.bitwarden
       pkgs.thunderbird
+
+      inputs.copy-paste.packages.x86_64-linux.default
       # inputs.ccalc.packages.x86_64-linux.default
     ];
 

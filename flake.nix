@@ -72,6 +72,11 @@
       url = "github:vivAnicc/needlelight-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    copy-paste = {
+      url = "github:vivAnicc/copy-paste";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, stable-nixpkgs, ... }@inputs: {
