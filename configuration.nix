@@ -21,6 +21,7 @@
     modules/nixos/evince.nix
     modules/nixos/ly.nix
     modules/nixos/interception-tools.nix
+    modules/nixos/thunar.nix
   ];
 
   system.stateVersion = "25.05";
