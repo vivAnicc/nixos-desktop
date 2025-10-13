@@ -1,8 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, stable-pkgs, ... }:
 
 let
   itools = pkgs.interception-tools;
-  itools-caps = pkgs.interception-tools-plugins.caps2esc;
+  itools-caps = pkgs.interception-tools-plugins.caps2esc.overrideAttrs {
+    nativeBuildInputs = [ stable-pkgs.cmake ];
+  };
 in {
   services.interception-tools = {
     enable = true;

@@ -8,6 +8,6 @@
 
 	programs.nixvim.lsp.servers.zls = {
     enable = true;
-    settings.settings.zig_lib_path = lib.mkIf config.programs.nixvim.enable "${inputs.zig.packages."${pkgs.system}".master}/lib";
+    config.settings.zig_lib_path = lib.mkIf config.programs.nixvim.enable "${inputs.zig.packages."${pkgs.system}".master}/lib";
   };
 }

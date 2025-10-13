@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    stable-nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
@@ -73,10 +74,11 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs: {
+  outputs = { nixpkgs, stable-nixpkgs, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem (
       let
         system = "x86_64-linux";
+        stable-pkgs = import stable-nixpkgs {inherit system;};
         unfree-pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
@@ -84,7 +86,7 @@
       in {
         inherit system;
 
-        specialArgs = {inherit inputs unfree-pkgs;};
+        specialArgs = {inherit inputs unfree-pkgs stable-pkgs;};
 
         modules = [
           ./configuration.nix

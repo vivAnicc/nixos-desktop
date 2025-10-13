@@ -5,7 +5,7 @@
     modules/home-manager/themes.nix
 
     modules/home-manager/fish.nix
-    modules/home-manager/c.nix
+    # modules/home-manager/c.nix
     modules/home-manager/nvim.nix
     modules/home-manager/zig.nix
     modules/home-manager/ssh.nix
