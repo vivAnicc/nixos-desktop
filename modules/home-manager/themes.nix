@@ -28,7 +28,7 @@
     enable = true;
     colorScheme = "dark";
     theme = {
-      name = "Adwaita";
+      name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
     };
     cursorTheme = {
@@ -38,7 +38,7 @@
     };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
+      name = "Adwaita-dark";
     };
   };
 }
