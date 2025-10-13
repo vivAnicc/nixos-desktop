@@ -24,6 +24,10 @@
       ''
         set -l choosen (choose-dir ~)
 
+        if test "$choosen" = ""
+          exit
+        end
+
         set -l escaped (string escape "$choosen")
 
         ghostty -e fish -C "cd ~/$escaped"
