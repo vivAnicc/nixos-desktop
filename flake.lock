@@ -98,11 +98,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1760380140,
-        "narHash": "sha256-+Bhm+PYJ51gbyi2YeF5EY8eh1AukmrN85OkQuwkphhk=",
+        "lastModified": 1760636661,
+        "narHash": "sha256-ie3mzhyEO0X+NTbwRlF6arl8rs9ulDjlfbDtOobm+3E=",
         "owner": "vivAnicc",
         "repo": "copy-paste",
-        "rev": "5ae38ce09f3f393d59e3f163d9934052c7ca621d",
+        "rev": "1953e5570ed87b658a118b4990e31da476fd3249",
         "type": "github"
       },
       "original": {
