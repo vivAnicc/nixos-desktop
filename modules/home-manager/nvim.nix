@@ -87,7 +87,8 @@ in {
 
 			inlayHints.enable = false;
 
-			onAttach = ''
+			onAttach = #lua
+      ''
 				if client:supports_method('textDocument/completion') then
 					vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
 				end
@@ -119,7 +120,8 @@ in {
 
 		extraConfigLua = ''
 			vim.cmd("set completeopt+=noselect")
-			'';
+      vim.cmd("set shortmess+=I")
+    '';
 
     autoCmd = [
       {
