@@ -321,6 +321,7 @@
         "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen"
         "SUPER, Space, exec, $menu"
         "SUPER, o, exec, ${pkgs.wofi}/bin/wofi -n --show run"
+        "SUPER, p, exec, $terminal -e nvim"
 
         "SUPER, v, togglesplit"
         "SUPER, f, togglefloating"
