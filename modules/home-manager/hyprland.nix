@@ -236,6 +236,18 @@
         "SUPER, mouse:273, resizewindow"
       ];
 
+      binde = [
+        "SUPER, left, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- -30 0"
+        "SUPER, right, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 30 0"
+        "SUPER, up, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 0 -30"
+        "SUPER, down, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 0 30"
+
+        # "SUPER, left&up, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- -20 -20"
+        # "SUPER, left&down, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- -20 20"
+        # "SUPER, right&up, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 20 -20"
+        # "SUPER, right&down, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 20 20"
+      ];
+
       bind = [
         "SUPER, Return, exec, ${pkgs.ydotool}/bin/ydotool key 125:0 && sleep 0.1 && ${pkgs.ydotool}/bin/ydotool click C0"
 
@@ -263,10 +275,6 @@
         "SUPER, l, movefocus, r"
         "SUPER, k, movefocus, u"
         "SUPER, j, movefocus, d"
-        "SUPER, left, movefocus, l"
-        "SUPER, right, movefocus, r"
-        "SUPER, up, movefocus, u"
-        "SUPER, down, movefocus, d"
 
         "SUPER, Tab, cyclenext"
         "SUPER, Tab, bringactivetotop"
