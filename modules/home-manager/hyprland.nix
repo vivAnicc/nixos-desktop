@@ -20,8 +20,6 @@
     (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
     (pkgs.writeShellScriptBin "explore-script" ''
      fish -c '
-     ${#fish
-      ''
         set -l choosen (choose-dir ~)
 
         if test "$choosen" = ""
@@ -31,7 +29,6 @@
         set -l escaped (string escape "$choosen")
 
         ghostty -e fish -C "cd ~/$escaped"
-      ''}
       '
     '')
   ];
