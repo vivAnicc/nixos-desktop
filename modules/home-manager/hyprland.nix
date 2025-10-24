@@ -71,7 +71,7 @@
       "$terminal" = "${pkgs.ghostty}/bin/ghostty";
       "$fileManager" = "${pkgs.fish}/bin/fish -c 'term explorer'";
       "$browser" = "${pkgs.qutebrowser}/bin/qutebrowser";
-      "$menu" = "${pkgs.wofi}/bin/wofi -n --show drun";
+      "$menu" = "${pkgs.wofi}/bin/wofi -n -i --show drun";
 
       cursor = {
         inactive_timeout = 10;
