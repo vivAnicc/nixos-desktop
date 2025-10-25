@@ -86,14 +86,14 @@
       ];
 
       general = {
-        gaps_in = "5";
-        gaps_out = "10";
+        gaps_in = "0";
+        gaps_out = "0";
 
-        border_size = "2";
+        border_size = "1";
 
         # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors"
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.inactive_border" = "rgba(595959ff)";
 
         # Set to true enable resizing windows by clicking and dragging on borders and gaps"
         resize_on_border = "false";
@@ -210,6 +210,7 @@
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+        "noborder, onworkspace:w[t1]"
       ];
 
       bindel = [
