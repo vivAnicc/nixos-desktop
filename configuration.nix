@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ unfree-pkgs, pkgs, inputs, ... }:
+{ unfree-pkgs, pkgs, stable-pkgs, inputs, ... }:
 
 {
   imports = [
@@ -97,7 +97,7 @@
 
   home-manager = {
     backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs unfree-pkgs; };
+    extraSpecialArgs = { inherit inputs unfree-pkgs stable-pkgs; };
     users."nick" = import ./home.nix;
     useUserPackages = true;
     useGlobalPkgs = true;
