@@ -44,6 +44,7 @@
       "<Ctrl+e>" = "edit-text";
       "<Alt+e>" = "edit.url";
       "cc" = "spawn --userscript qute-bitwarden";
+      "gd" = "config-cycle colors.webpage.darkmode.enabled";
     };
 
     settings = {
