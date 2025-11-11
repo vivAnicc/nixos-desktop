@@ -1,6 +1,10 @@
 { inputs, pkgs, ... }:
 
 {
+  imports = [
+    ./hyprpaper.nix
+  ];
+
   # This shouldn't be here
   home.packages = [
     pkgs.swaynotificationcenter
@@ -256,7 +260,7 @@
 
         "SUPER_SHIFT, q, exit,"
 
-        "SUPER, r, exec, lights on"
+        "SUPER, r, exec, set-wallpaper silksong"
 
         "SUPER, f11, fullscreen"
 
