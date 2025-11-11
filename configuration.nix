@@ -22,6 +22,7 @@
     modules/nixos/ly.nix
     modules/nixos/interception-tools.nix
     modules/nixos/thunar.nix
+    modules/nixos/nix-ld.nix
   ];
 
   system.stateVersion = "25.05";
