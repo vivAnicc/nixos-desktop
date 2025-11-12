@@ -15,10 +15,10 @@
     pkgs.qt5.qtwayland
     pkgs.qt6.qtwayland
     pkgs.libsForQt5.qt5ct
-    pkgs.qt6ct
+    pkgs.qt6Packages.qt6ct
     pkgs.wl-clipboard
 
-    inputs.zen-browser.packages."${pkgs.system}".default
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
 
     # Fix xdg-open trying to use "x-terminal-emulator" to open terminals
     (pkgs.writeShellScriptBin "x-terminal-emulator" "ghostty $@")
@@ -328,7 +328,7 @@
         "SUPER, e, exec, explore-script"
         # "SUPER, e, exec, $fileManager"
         "SUPER, b, exec, $browser"
-        "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen"
+        "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/zen"
         "SUPER, Space, exec, $menu"
         "SUPER, o, exec, ${pkgs.wofi}/bin/wofi -n --show run"
         "SUPER, p, exec, $terminal -e nvim"

@@ -9,7 +9,7 @@
       enable32Bit = true;
       extraPackages = [
         pkgs.nvidia-vaapi-driver
-        pkgs.vaapiVdpau
+        pkgs.libva-vdpau-driver
         pkgs.libvdpau-va-gl
         pkgs.libva
       ];
@@ -29,7 +29,7 @@
 
   environment.systemPackages = [
     pkgs.vulkan-tools
-    pkgs.glxinfo
+    pkgs.mesa-demos
     pkgs.libva-utils
   ];
 }

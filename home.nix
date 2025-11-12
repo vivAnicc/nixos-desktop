@@ -35,7 +35,7 @@
       pkgs.file
       pkgs.tree
       pkgs.gnome-themes-extra
-      pkgs.bitwarden
+      pkgs.bitwarden-desktop
       pkgs.thunderbird
       pkgs.wine
 

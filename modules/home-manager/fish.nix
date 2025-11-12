@@ -6,7 +6,7 @@
     pkgs.fzf
     pkgs.bitwarden-cli
     pkgs.jp
-    inputs.nix-your-shell.packages."${pkgs.system}".nix-your-shell
+    inputs.nix-your-shell.packages."${pkgs.stdenv.hostPlatform.system}".nix-your-shell
     (
      pkgs.writeShellScriptBin "lights-off" #bash
      ''
