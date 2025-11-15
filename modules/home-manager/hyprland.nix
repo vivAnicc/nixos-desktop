@@ -86,6 +86,7 @@
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.swaynotificationcenter}/bin/swaync"
         "${pkgs.keyutils}/bin/keyctl link @u @s"
+        "${pkgs.hyprpaper}/bin/hyprpaper"
         # "${pkgs.nordvpn}/bin/nordvpn connect italy"
       ];
 
