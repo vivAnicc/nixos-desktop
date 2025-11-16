@@ -23,6 +23,7 @@
     modules/nixos/interception-tools.nix
     modules/nixos/thunar.nix
     modules/nixos/nix-ld.nix
+    modules/nixos/qbittorrent.nix
   ];
 
   system.stateVersion = "25.05";
