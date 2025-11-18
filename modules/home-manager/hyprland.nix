@@ -72,10 +72,10 @@
 
       monitor = ",preferred,auto,auto";
 
-      "$terminal" = "${pkgs.ghostty}/bin/ghostty";
-      "$fileManager" = "${pkgs.fish}/bin/fish -c 'term explorer'";
-      "$browser" = "${pkgs.qutebrowser}/bin/qutebrowser";
-      "$menu" = "${pkgs.wofi}/bin/wofi -n -i --show drun";
+      "$terminal" = "ghostty";
+      "$fileManager" = "fish -c 'term explorer'";
+      "$browser" = "qutebrowser";
+      "$menu" = "wofi -n -i --show drun";
 
       cursor = {
         inactive_timeout = 10;
@@ -83,11 +83,11 @@
       };
 
       exec-once = [
-        "${pkgs.waybar}/bin/waybar"
-        "${pkgs.swaynotificationcenter}/bin/swaync"
-        "${pkgs.keyutils}/bin/keyctl link @u @s"
+        "waybar"
+        "swaync"
+        "keyctl link @u @s"
         "${pkgs.hyprpaper}/bin/hyprpaper"
-        # "${pkgs.nordvpn}/bin/nordvpn connect italy"
+        # "nordvpn connect italy"
       ];
 
       general = {
@@ -240,24 +240,19 @@
       ];
 
       binde = [
-        "SUPER, left, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- -30 0"
-        "SUPER, right, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 30 0"
-        "SUPER, up, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 0 -30"
-        "SUPER, down, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 0 30"
-
-        # "SUPER, left&up, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- -20 -20"
-        # "SUPER, left&down, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- -20 20"
-        # "SUPER, right&up, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 20 -20"
-        # "SUPER, right&down, exec, ${pkgs.ydotool}/bin/ydotool mousemove -- 20 20"
+        "SUPER, left, exec, ydotool mousemove -- -30 0"
+        "SUPER, right, exec, ydotool mousemove -- 30 0"
+        "SUPER, up, exec, ydotool mousemove -- 0 -30"
+        "SUPER, down, exec, ydotool mousemove -- 0 30"
       ];
 
       bind = [
-        "SUPER, Return, exec, ${pkgs.ydotool}/bin/ydotool key 125:0 && sleep 0.1 && ${pkgs.ydotool}/bin/ydotool click C0"
+        "SUPER, Return, exec, ydotool key 125:0 && sleep 0.1 && ydotool click C0"
 
         "SUPER, m, movetoworkspacesilent, special"
         "SUPER, s, togglespecialworkspace"
 
-        ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m window"
+        ", PRINT, exec, hyprshot -m window"
 
         "SUPER_SHIFT, q, exit,"
 
@@ -265,14 +260,14 @@
 
         "SUPER, f11, fullscreen"
 
-        # "SUPER, c, exec, ${pkgs.fish}/bin/fish -c 'term bwup'"
-        # "SUPER, u, exec, ${pkgs.fish}/bin/fish -c 'term bwu'"
-        # "SUPER, p, exec, ${pkgs.fish}/bin/fish -c 'term bwp'"
-        # "SUPER, a, exec, ${pkgs.fish}/bin/fish -c 'term bwa'"
+        # "SUPER, c, exec, fish -c 'term bwup'"
+        # "SUPER, u, exec, fish -c 'term bwu'"
+        # "SUPER, p, exec, fish -c 'term bwp'"
+        # "SUPER, a, exec, fish -c 'term bwa'"
 
-        "SUPER, c, exec, ${pkgs.rofi}/bin/rofi -show run"
+        "SUPER, c, exec, rofi -show run"
 
-        "SUPER, Backspace, exec, ${pkgs.hyprlock}/bin/hyprlock"
+        "SUPER, Backspace, exec, hyprlock"
 
         "SUPER, h, movefocus, l"
         "SUPER, l, movefocus, r"
@@ -329,9 +324,9 @@
         "SUPER, e, exec, explore-script"
         # "SUPER, e, exec, $fileManager"
         "SUPER, b, exec, $browser"
-        "SUPER, z, exec, ${inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/zen"
+        "SUPER, z, exec, zen"
         "SUPER, Space, exec, $menu"
-        "SUPER, o, exec, ${pkgs.wofi}/bin/wofi -n --show run"
+        "SUPER, o, exec, wofi -n --show run"
         "SUPER, p, exec, $terminal -e nvim"
 
         "SUPER, v, togglesplit"
