@@ -39,6 +39,7 @@
       pkgs.bitwarden-desktop
       pkgs.thunderbird
       pkgs.wine
+      pkgs.comma
 
       inputs.copy-paste.packages.x86_64-linux.default
       # inputs.ccalc.packages.x86_64-linux.default

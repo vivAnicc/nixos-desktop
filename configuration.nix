@@ -24,6 +24,7 @@
     modules/nixos/thunar.nix
     modules/nixos/nix-ld.nix
     modules/nixos/qbittorrent.nix
+    modules/nixos/docker.nix
   ];
 
   system.stateVersion = "25.05";
