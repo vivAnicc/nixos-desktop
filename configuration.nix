@@ -8,20 +8,20 @@
   imports = [
     ./hardware-configuration.nix
     modules/nixos/cachix.nix
-    modules/nixos/themes.nix
+    # modules/nixos/themes.nix
     modules/nixos/nvidia.nix
 
-    inputs.home-manager.nixosModules.home-manager
-    modules/nixos/ssh.nix
+    # inputs.home-manager.nixosModules.home-manager
+    # modules/nixos/ssh.nix
     modules/nixos/zerotierone.nix
     modules/nixos/nordvpn.nix
     modules/nixos/ydotool.nix
     modules/nixos/steam.nix
-    modules/nixos/git.nix
-    modules/nixos/evince.nix
+    # modules/nixos/git.nix
+    # modules/nixos/evince.nix
     modules/nixos/ly.nix
     modules/nixos/interception-tools.nix
-    modules/nixos/thunar.nix
+    # modules/nixos/thunar.nix
     modules/nixos/nix-ld.nix
     modules/nixos/qbittorrent.nix
     modules/nixos/docker.nix
@@ -51,6 +51,7 @@
     # pkgs.nvidia-vaapi-driver
     pkgs.wl-clipboard
     pkgs.wget
+    pkgs.home-manager
   ];
 
   networking = {
@@ -68,6 +69,8 @@
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
   };
+
+  xdg.portal.config.common.default = "hyprland";
 
   time.timeZone = "Europe/Rome";
 
@@ -98,25 +101,19 @@
 
   services.printing.enable = true;
 
-  home-manager = {
-    backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs unfree-pkgs stable-pkgs; };
-    users."nick" = import ./home.nix;
-    useUserPackages = true;
-    useGlobalPkgs = true;
-  };
+  # home-manager = {
+  #   backupFileExtension = "backup";
+  #   extraSpecialArgs = { inherit inputs unfree-pkgs stable-pkgs; };
+  #   users."nick" = import ./home.nix;
+  #   useUserPackages = true;
+  #   useGlobalPkgs = true;
+  # };
 
   # fileSystems = {
   #   "/run/media/home".device = "/dev/nvme0n1p3";
   #   "/run/media/root".device = "/dev/nvme0n1p2";
   #   "/run/media/root/boot".device = "/dev/nvme0n1p1";
   # };
-
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.hyprland;
-    portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
-  };
 
   # system.autoUpgrade = {
   #   enable = true;
