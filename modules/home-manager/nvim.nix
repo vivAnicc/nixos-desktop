@@ -51,11 +51,6 @@ in {
 			fzf-lua = {
 				enable = true;
         package = pkgs.vimPlugins.fzf-lua;
-        #   .overrideAttrs (old: {
-        #   dontCheck = true;
-        #   doCheck = false;
-        # });
-        # lazyLoad.settings.cmd = "FzfLua";
 				profile = "default";
 				settings.files = {
 					git_icons = false;
