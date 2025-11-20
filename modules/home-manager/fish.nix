@@ -136,7 +136,12 @@
 
       fish_config theme choose "Catppuccin Mocha"
 
-      nix-your-shell fish | source
+      if test -z "$CONTAINER_ID"
+        nix-your-shell fish | source
+      else
+        set OLD_PATH $PATH
+        set PATH /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+      end
     '';
   };
 
