@@ -25,6 +25,7 @@
     modules/nixos/nix-ld.nix
     modules/nixos/qbittorrent.nix
     modules/nixos/docker.nix
+    modules/nixos/hyprland.nix
   ];
 
   system.stateVersion = "25.05";
