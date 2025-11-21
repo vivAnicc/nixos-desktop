@@ -54,6 +54,8 @@
     pkgs.home-manager
   ];
 
+  programs.dconf.enable = true;
+
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
