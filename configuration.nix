@@ -53,9 +53,11 @@
     pkgs.wl-clipboard
     pkgs.wget
     pkgs.home-manager
+    pkgs.virtualbox
   ];
 
   programs.dconf.enable = true;
+  programs.virt-manager.enable = true;
 
   networking = {
     hostName = "nixos";
